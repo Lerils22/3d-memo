@@ -1,4 +1,4 @@
-const cube = document.querySelector('.cube');
+const cubes = document.querySelectorAll('.cube');
 
 document.addEventListener('mousemove', (event) => {
   const { clientX, clientY } = event;
@@ -6,5 +6,8 @@ document.addEventListener('mousemove', (event) => {
   const centerY = window.innerHeight / 2;
   const angleX = (clientY - centerY) / centerY * 45;
   const angleY = (clientX - centerX) / centerX * -45;
-  cube.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+
+  cubes.forEach(cube => {
+    cube.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+  });
 });
