@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.scene {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  animation: rotate 10s linear infinite;
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  opacity: 0.8;
+  background-size: cover;
+  background-position: center;
+}
+
+.front { background-image: url('https://scontent.xx.fbcdn.net/v/t1.15752-9/441511810_412199708292093_7271210937979178058_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=nhFQYN10dBkQ7kNvgEdsbFY&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QHh123xT3gqYn2ENhjE2vNYYwUOjjciQe-g2CWRh6GcjA&oe=6671B4C0'); transform: translateZ(100px); }
+.back { background-image: url('https://scontent.xx.fbcdn.net/v/t1.15752-9/439241800_1832005763980066_5249036107570876762_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=QCafrpAqP5sQ7kNvgEMApHD&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGhtOK0WRNfeYgCvut2v3HwKQJOFzdHSP5HBir58EcaGg&oe=6671A169'); transform: rotateY(180deg) translateZ(100px); }
+.right { background-image: url('https://scontent.xx.fbcdn.net/v/t1.15752-9/438137459_744369447898480_5661761274315132543_n.png?stp=dst-png_s235x350&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=u5PW7iVE7x0Q7kNvgFJULdx&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QF1ErgieSchNkSSyEmT-eaBvty1Iu0odc1oiN8JhiUjoQ&oe=66719015'); transform: rotateY(90deg) translateZ(100px); }
+.left { background-image: url('https://scontent.xx.fbcdn.net/v/t1.15752-9/441519466_991859822550221_251574987611143141_n.jpg?stp=dst-jpg_s851x315&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cTKGFbf_hykQ7kNvgGm3G4S&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QE3unusng56jYYhUwb6uJsltzgfnPuku4tza1qnS7V9rg&oe=6671C167'); transform: rotateY(-90deg) translateZ(100px); }
+.top { background-image: url('https://scontent.xx.fbcdn.net/v/t1.15752-9/438112530_963318368474135_5487420527333183685_n.jpg?stp=dst-jpg_p160x160&_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=nQE7UzLUBlUQ7kNvgH-ld1t&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QG1qAfU3ZyngEOhXKpgq10n3xcv_ynVQyG6jRUCajAeEg&oe=6671AD43'); transform: rotateX(90deg) translateZ(100px); }
+.bottom { background-image: url('https://scontent.xx.fbcdn.net/v/t1.15752-9/430797277_800826894776722_7411415716765830107_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=hzQ1GZF4g8UQ7kNvgEfVE8O&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QFdga6MpzeSQw-A11gWmypRFWiJZHksYbrkvotFg1fzyA&oe=6671ABAA'); transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes rotate {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to { transform: rotateX(360deg) rotateY(360deg); }
+}
